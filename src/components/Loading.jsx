@@ -1,4 +1,4 @@
-const Spinner = ({ loading }) => {
+const Loading = ({ loading }) => {
   return (
     <>
       {loading && (
@@ -10,4 +10,4 @@ const Spinner = ({ loading }) => {
   );
 };
 
-export default Spinner;
+export default Loading;
