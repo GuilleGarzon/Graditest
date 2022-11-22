@@ -1,5 +1,5 @@
-import ShoppingProvider from './context/ShoppingProvider';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Store from './store/index';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
@@ -9,7 +9,7 @@ import './styles/styles.scss';
 function App() {
   return (
     <div className="app">
-      <ShoppingProvider>
+      <Store>
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -18,7 +18,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
-      </ShoppingProvider>
+      </Store>
     </div>
   );
 }
