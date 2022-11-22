@@ -1,0 +1,16 @@
+@import './config.scss';
+@import './app.scss';
+
+// Components
+@import './components/carousel.scss';
+@import './components/footer.scss';
+@import './components//gridproducts.scss';
+@import './components/cartIcon.scss';
+@import './components/modal.scss';
+@import './components/navbar.scss';
+@import './components//references.scss';
+@import './components/spinner.scss';
+
+// Pages
+@import './pages/cart.scss';
+@import './pages/home.scss';
