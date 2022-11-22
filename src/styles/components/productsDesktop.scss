@@ -2,7 +2,7 @@
   display: none;   
 }
 
-@media (min-width: 700) {
+@media (min-width: 700px) {
   .products {
     column-gap: 10px;
     display: grid;
