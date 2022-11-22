@@ -1,0 +1,251 @@
+.description {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 10px;
+  padding-top: 20px;
+  width: 90%;
+
+  &__vendor {
+    color: #c4c4c4;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 1.9rem;
+    margin: 0;
+  }
+
+  &__href {
+    align-items: center;
+    border-bottom: 2px solid #d2d2d2;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__price {
+    color: #1b1b1b;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    &--compare {
+      color: #c4c4c4;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 0px 15px;
+      position: relative;
+      text-decoration: line-through;
+    }
+  }
+
+  &__colors {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0px 10px;
+    min-height: 30px;
+    min-width: 30px;
+
+    &.active {
+      align-items: center;
+      border: 2px solid #d2d2d2;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0px 10px;
+      min-height: 30px;
+      min-width: 30px;
+    }
+  }
+
+  &__option {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    min-height: 15px;
+    min-width: 15px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &[color='Red'] {
+      background-color: red;
+    }
+
+    &[color='Black'] {
+      background-color: #000;
+    }
+  }  
+
+  &__size {
+    display: inline-flex;
+    border-bottom: 2px solid #d2d2d2;
+    width: 100%;
+
+    &__title {
+      margin-top: 10px;
+    }
+
+    &__list {
+      display: grid;
+      column-gap: 10px;
+      grid-template-columns: repeat(4, minmax(40px, 40px));
+      grid-template-rows: repeat(auto-fill, minmax(40px, 40px));
+      height: 100%;
+      list-style: none;
+      row-gap: 10px;
+      width: 100%;
+    }
+
+    &__item {
+      align-items: center;
+      border: 2px solid #d2d2d2;
+      color: #d2d2d2;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      max-height: 36px;
+      min-height: 36px;
+      max-width: 36px;
+      min-width: 36px;
+      vertical-align: middle;
+
+      &.activate {
+        border: 2px solid #000;
+        color: #000;
+      }
+      
+    }
+  }
+
+  &__total {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  &__quantity {
+    align-items: center;
+    border: 2px solid #d2d2d2;
+    display: inline-flex;
+    height: 40px;
+    justify-content: space-between;
+    width: 120px;
+  }
+
+  &__tope {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  &_counter {
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__favorite {
+    background-color: #e6e4e5c2;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+
+    &:hover {
+      background-color: #cfcbcd;      
+    }
+  }
+
+  &__add {
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100%;
+
+    &:hover {
+      color: black;
+      border: 2px solid #3a3939;
+      background-color: rgba(0, 0, 0, 0.027);
+    }
+  }
+
+  &__product {
+    min-height: fit-content;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 720px) {
+  .description {
+    height: 100%;
+    grid-template-rows: 1fr;
+    grid-area: 1 / 2 / 4 / 3;
+
+    &__price {
+      padding: 20px 0px;
+    }
+
+    &__sizes {
+      padding: 20px 0px;
+    }
+  }  
+}
+
+@media (min-width: 1000px) {
+  .description {
+    grid-area: 1 / 6 / 3 / 9;
+
+    &__size__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__size__item {
+      min-width: 30px;
+      max-width: 30px;
+      max-height: 30px;
+      min-height: 30px;
+    }
+
+    &__buttons {
+      flex-direction: row;
+      column-gap: 10px;
+    }
+  }     
+}
