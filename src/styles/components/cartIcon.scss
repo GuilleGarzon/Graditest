@@ -1,0 +1,35 @@
+.cart {
+  background-image: url('../../../public/icon-cart.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 30px;
+  min-height: 25px;
+  position: relative;
+  right: 0;
+  width: 25px;
+  z-index: 99;
+
+  &__products {
+    background-color: red;
+    border: none;
+    border-radius: 60%;
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    height: 15px;
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    width: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cart {
+    margin-right: 50px;
+  }
+}
