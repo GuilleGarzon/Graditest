@@ -15,7 +15,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900) {
   .container {
     column-gap: 10px;
     grid-template-columns: 50px repeat(3, 1fr) 30px repeat(3, 1fr);
